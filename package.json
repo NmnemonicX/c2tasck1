@@ -1,0 +1,19 @@
+{
+  "name": "first",
+  "version": "0.0.1",
+  "description": "первое задание",
+  "main": "app.js",
+  "scripts": {
+    "build": "./node_modules/.bin/tsc --project ./tsconfig.json --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "я",
+  "license": "MIT",
+  "keywords": [],
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.13.0",
+    "@typescript-eslint/parser": "^5.13.0",
+    "eslint": "^8.10.0",
+    "typescript": "^4.6.2"
+  }
+}
