@@ -1,44 +1,33 @@
+import { myContainer } from "./container";
+import {BookRepository} from "./Repository"
 
 
-interface IBook {
-    id: number;
-    title: string;
-    description: string;
-    authors: string;
-    favorite: string;
-    fileCover: string;
-    fileName: string;
-    fileBook: string;
-}
+console.log("hello");
 
-class BookRepository {
+let book1 =new BookRepository()
 
-    books:IBook[] ;
+console.log("book.getBooks()");
+console.log(book1.getBooks()); //это без контейнера
 
-    createBook(book:IBook){
-        this.books.push(book);
-    }
-    getBook(id:number){
-        return this.books.find(book=>book.id===id)
-    }
-    getBooks(){
-        return this.books
-    }
-    updateBook(book:IBook){
-        let updateitem = this.books.find(z=>z.id===book.id)
-        let index = this.books.indexOf(updateitem)
+class App{
 
-        this.books[index]=book
-        return this.books[index]
-    }
-    deleteBook(id:number){
-        let deletitem = this.books.find(z=>z.id===id)
-        let index = this.books.indexOf(deletitem)
-        let deleItems = this.books.splice (index, 1);
-        return this.books
+    public run(){
+        const repo = myContainer.get(BookRepository);
+        const book = repo.getBook(1);     
+        return book
     }
 
 }
+
+
+const app= new App()
+
+console.log("вывод с контейнером");
+
+console.log(app.run())  //это с  контейнером
+
+
+console.log("end");
 
 
 
