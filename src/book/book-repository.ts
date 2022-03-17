@@ -2,7 +2,7 @@
 import { injectable, inject } from "inversify";
 import "reflect-metadata";
 
-import {IBook} from "./interfaces"
+import {IBook} from "./book-interface"
 
 
 @injectable()

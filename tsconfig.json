@@ -9,6 +9,10 @@
       "reflect-metadata"
     ],
     "module": "commonjs",
+    "rootDir": "./src",
+     "allowJs": true,                                  /* Allow JavaScript files to be a part of your program. Use the `checkJS` option to get errors from these files. */
+     "checkJs": true,
+    "outDir": "./dist",
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true

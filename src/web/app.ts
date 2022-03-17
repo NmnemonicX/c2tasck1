@@ -1,13 +1,8 @@
-import { myContainer } from "./container";
-import {BookRepository} from "./Repository";
+import { myContainer } from "../infrastructure/container";
+import {BookRepository} from "../book/book-repository";
 import express  = require('express');
 
 console.log("hello");
-
-let book1 =new BookRepository()
-
-console.log("book.getBooks()");
-console.log(book1.getBooks()); //это без контейнера
 
 class App2{
 
@@ -23,18 +18,7 @@ class App2{
     }
 
 }
-
 const app2= new App2()
-
-console.log("вывод с контейнером");
-
-console.log(app2.run(1))  //вариант с  контейнером
-
-
-console.log("end");
-
-
-
 const app = express();
 const PORT = 3000;
 
@@ -48,7 +32,6 @@ app.get('/:id',(req, res, next) => { //вариант с  контейнером
     res.json(app2.run(id_number));
     
 })
-
 
 app.listen(PORT, () => {
     console.log(`Express with Typescript! http://localhost:${PORT}`);

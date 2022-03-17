@@ -2,10 +2,10 @@
   "name": "first",
   "version": "0.0.1",
   "description": "первое задание",
-  "main": "app.js",
+  "main": "src/web/app.ts",
   "scripts": {
-    "start": "node app.js",
-    "build": "./node_modules/.bin/tsc --project ./tsconfig.json --watch",
+    "start": "node ./dist/web/app.js",
+    "build": "tsc --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "я",
